@@ -55,7 +55,7 @@ cp /peer-finder "${WORKDIR_VOLUME}"/
 
 echo installing zookeeper-"${VERSION}" into "${INSTALL_VOLUME}"
 mkdir -p "${INSTALL_VOLUME}"
-wget -q -O - http://apache.mirrors.pair.com/zookeeper/zookeeper-"${VERSION}"/zookeeper-"${VERSION}".tar.gz | tar -xzf - -C "${INSTALL_VOLUME}"
+#wget -q -O - http://apache.mirrors.pair.com/zookeeper/zookeeper-"${VERSION}"/zookeeper-"${VERSION}".tar.gz | tar -xzf - -C "${INSTALL_VOLUME}"
 mv "${INSTALL_VOLUME}"/zookeeper-"${VERSION}" "${INSTALL_VOLUME}"/zookeeper
 cp "${INSTALL_VOLUME}"/zookeeper/conf/zoo_sample.cfg "${INSTALL_VOLUME}"/zookeeper/conf/zoo.cfg
 

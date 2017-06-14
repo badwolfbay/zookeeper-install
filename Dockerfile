@@ -23,6 +23,7 @@ ADD on-start.sh /
 ADD on-change.sh /
 # See contrib/pets/peer-finder for details
 RUN wget -qO /peer-finder https://storage.googleapis.com/kubernetes-release/pets/peer-finder
+RUN wget -q -O - http://apache.mirrors.pair.com/zookeeper/zookeeper-3.5.0-alpha/zookeeper-3.5.0-alpha.tar.gz | tar -xzf - -C /opt
 
 ADD install.sh /
 RUN chmod -c 755 /install.sh /on-start.sh /on-change.sh /peer-finder
